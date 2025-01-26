@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35514.174
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution-items", "solution-items", "{A97F4A9F-F750-4E72-847A-D3078746C4A2}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		global.json = global.json
+		LICENSE.md = LICENSE.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D3871E61-CA47-4BD0-8BF9-B64A42B2200D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Essensoft.Paylinks.Razor.Pages.Samples.Web", "src\Essensoft.Paylinks.Razor.Pages.Samples.Web\Essensoft.Paylinks.Razor.Pages.Samples.Web.csproj", "{9F1E66B8-E917-4C37-9665-811E6D240598}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F1E66B8-E917-4C37-9665-811E6D240598}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F1E66B8-E917-4C37-9665-811E6D240598}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F1E66B8-E917-4C37-9665-811E6D240598}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F1E66B8-E917-4C37-9665-811E6D240598}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9F1E66B8-E917-4C37-9665-811E6D240598} = {D3871E61-CA47-4BD0-8BF9-B64A42B2200D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C5BE9B18-CD29-4490-84EA-68EDEEF75428}
+	EndGlobalSection
+EndGlobal

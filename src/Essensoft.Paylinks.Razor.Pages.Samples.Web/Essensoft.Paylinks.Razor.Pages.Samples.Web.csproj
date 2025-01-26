@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="QRCoder" Version="1.6.0" />
+  </ItemGroup>
+
+	<ItemGroup>
+    <PackageReference Include="Essensoft.Paylinks.Alipay.Client" Version="5.0.1" />
+    <PackageReference Include="Essensoft.Paylinks.Alipay.Mvc" Version="5.0.1" />
+    <PackageReference Include="Essensoft.Paylinks.Alipay.Payments" Version="5.0.1" />
+    <PackageReference Include="Essensoft.Paylinks.WeChatPay.Client" Version="5.0.1" />
+    <PackageReference Include="Essensoft.Paylinks.WeChatPay.Mvc" Version="5.0.1" />
+    <PackageReference Include="Essensoft.Paylinks.WeChatPay.Payments" Version="5.0.1" />
+    <PackageReference Include="Essensoft.Paylinks.WeChatPay.Certificates" Version="5.0.1" />
+	</ItemGroup>
+
+</Project>
