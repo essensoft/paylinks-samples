@@ -19,7 +19,7 @@ public class WeChatPayBackgroundService(
 {
     private readonly PaylinksOptions _options = options.Value;
 
-    // 如何通过证书信任链验证平台证书？https://pay.weixin.qq.com/doc/v3/merchant/4012072597
+    // 如何通过证书信任链验证平台证书？https://pay.weixin.qq.com/doc/v3/merchant/4012069411
     // 微信支付平台证书信任链: https://wx.gtimg.com/mch/files/CertTrustChain.p7b
     private const string WeChatPayRootCertPem = """
         subject=/C=CN/O=Tenpay.com/OU=Tenpay.com CA Center/CN=Tenpay.com Root CA
