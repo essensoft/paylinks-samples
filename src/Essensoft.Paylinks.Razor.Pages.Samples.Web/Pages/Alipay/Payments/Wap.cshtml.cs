@@ -12,7 +12,7 @@ public class WapModel(IAlipayClient client, IOptions<PaylinksOptions> options) :
     private readonly AlipayClientOptions _options = options.Value.Alipay;
 
     [BindProperty]
-    public AlipayTradeWapPayBizModel Input { get; set; }
+    public AlipayTradeWapPayBizModel Input { get; set; } = default!;
 
     public void OnGet()
     {

@@ -12,10 +12,10 @@ public class ReverseModel(IWeChatPayClient client, IOptions<PaylinksOptions> opt
     private readonly WeChatPayClientOptions _options = options.Value.WeChatPay;
 
     [BindProperty]
-    public string OutTradeNo { get; set; }
+    public string OutTradeNo { get; set; } = string.Empty;
 
     [BindProperty]
-    public WeChatPayReverseBodyModel Input { get; set; }
+    public WeChatPayReverseBodyModel Input { get; set; } = default!;
 
     public void OnGet()
     {

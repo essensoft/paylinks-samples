@@ -7,7 +7,7 @@ namespace Essensoft.Paylinks.Razor.Pages.Samples.Web.Pages.Alipay.SecurityTools;
 public class GetRootCertSNModel : PageModel
 {
     [BindProperty]
-    public IFormFile RootCert { get; set; }
+    public IFormFile RootCert { get; set; } = default!;
 
     public void OnGet()
     {

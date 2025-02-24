@@ -12,10 +12,10 @@ public class QueryByTransactionIdModel(IWeChatPayClient client, IOptions<Paylink
     private readonly WeChatPayClientOptions _options = options.Value.WeChatPay;
 
     [BindProperty]
-    public string TransactionId { get; set; }
+    public string TransactionId { get; set; } = string.Empty;
 
     [BindProperty]
-    public WeChatPayQueryByTransactionIdQueryModel Input { get; set; }
+    public WeChatPayQueryByTransactionIdQueryModel Input { get; set; } = default!;
 
     public void OnGet()
     {

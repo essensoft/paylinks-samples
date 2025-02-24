@@ -12,7 +12,7 @@ public class GetFundFlowBillModel(IWeChatPayClient client, IOptions<PaylinksOpti
     private readonly WeChatPayClientOptions _options = options.Value.WeChatPay;
 
     [BindProperty]
-    public WeChatPayFundFlowBillQueryModel Input { get; set; }
+    public WeChatPayFundFlowBillQueryModel Input { get; set; } = default!;
 
     public void OnGet()
     {

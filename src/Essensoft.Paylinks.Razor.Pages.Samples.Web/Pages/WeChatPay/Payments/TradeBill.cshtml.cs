@@ -12,7 +12,7 @@ public class GetTradeBillModel(IWeChatPayClient client, IOptions<PaylinksOptions
     private readonly WeChatPayClientOptions _options = options.Value.WeChatPay;
 
     [BindProperty]
-    public WeChatPayTradeBillQueryModel Input { get; set; }
+    public WeChatPayTradeBillQueryModel Input { get; set; } = default!;
 
     public void OnGet()
     {

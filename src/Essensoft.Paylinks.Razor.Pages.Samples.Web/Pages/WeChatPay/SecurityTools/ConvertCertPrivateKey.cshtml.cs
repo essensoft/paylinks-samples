@@ -7,7 +7,7 @@ namespace Essensoft.Paylinks.Razor.Pages.Samples.Web.Pages.WeChatPay.SecurityToo
 public class ConvertCertPrivateKeyModel : PageModel
 {
     [BindProperty]
-    public IFormFile CertPrivateKey { get; set; }
+    public IFormFile CertPrivateKey { get; set; } = default!;
 
     public void OnGet()
     {

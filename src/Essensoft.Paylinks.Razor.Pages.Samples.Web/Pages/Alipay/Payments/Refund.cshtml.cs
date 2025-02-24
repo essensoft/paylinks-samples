@@ -12,7 +12,7 @@ public class RefundModel(IAlipayClient client, IOptions<PaylinksOptions> options
     private readonly AlipayClientOptions _options = options.Value.Alipay;
 
     [BindProperty]
-    public AlipayTradeRefundBodyModel Input { get; set; }
+    public AlipayTradeRefundBodyModel Input { get; set; } = default!;
 
     public void OnGet()
     {

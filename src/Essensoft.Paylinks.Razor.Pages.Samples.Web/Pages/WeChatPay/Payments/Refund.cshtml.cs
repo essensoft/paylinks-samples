@@ -13,7 +13,7 @@ public class RefundModel(IWeChatPayClient client, IOptions<PaylinksOptions> opti
     private readonly WeChatPayClientOptions _options = options.Value.WeChatPay;
 
     [BindProperty]
-    public WeChatPayRefundBodyModel Input { get; set; }
+    public WeChatPayRefundBodyModel Input { get; set; } = default!;
 
     public void OnGet()
     {

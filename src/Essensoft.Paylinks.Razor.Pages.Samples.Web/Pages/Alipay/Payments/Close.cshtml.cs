@@ -12,7 +12,7 @@ public class CloseModel(IAlipayClient client, IOptions<PaylinksOptions> options)
     private readonly AlipayClientOptions _options = options.Value.Alipay;
 
     [BindProperty]
-    public AlipayTradeCloseBodyModel Input { get; set; }
+    public AlipayTradeCloseBodyModel Input { get; set; } = default!;
 
     public void OnGet()
     {

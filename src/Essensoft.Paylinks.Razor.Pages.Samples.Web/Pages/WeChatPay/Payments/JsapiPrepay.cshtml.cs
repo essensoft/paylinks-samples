@@ -14,7 +14,7 @@ public class JsapiPrepayModel(IWeChatPayClient client, IOptions<PaylinksOptions>
     private readonly WeChatPayClientOptions _options = options.Value.WeChatPay;
 
     [BindProperty]
-    public WeChatPayTransactionsJsapiBodyModel Input { get; set; }
+    public WeChatPayTransactionsJsapiBodyModel Input { get; set; } = default!;
 
     public void OnGet()
     {

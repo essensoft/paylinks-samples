@@ -12,10 +12,10 @@ public class QueryByOutTradeNoModel(IWeChatPayClient client, IOptions<PaylinksOp
     private readonly WeChatPayClientOptions _options = options.Value.WeChatPay;
 
     [BindProperty]
-    public string OutTradeNo { get; set; }
+    public string OutTradeNo { get; set; } = string.Empty;
 
     [BindProperty]
-    public WeChatPayQueryByOutTradeNoQueryModel Input { get; set; }
+    public WeChatPayQueryByOutTradeNoQueryModel Input { get; set; } = default!;
 
     public void OnGet()
     {

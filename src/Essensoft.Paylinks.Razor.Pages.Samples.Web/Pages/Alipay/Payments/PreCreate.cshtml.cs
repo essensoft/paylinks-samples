@@ -12,7 +12,7 @@ public class PreCreateModel(IAlipayClient client, IOptions<PaylinksOptions> opti
     private readonly AlipayClientOptions _options = options.Value.Alipay;
 
     [BindProperty]
-    public AlipayTradePreCreateBodyModel Input { get; set; }
+    public AlipayTradePreCreateBodyModel Input { get; set; } = default!;
 
     public void OnGet()
     {

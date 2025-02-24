@@ -11,7 +11,7 @@ public class RefundQueryByOutRefundNoModel(IWeChatPayClient client, IOptions<Pay
     private readonly WeChatPayClientOptions _options = options.Value.WeChatPay;
 
     [BindProperty]
-    public string OutRefundNo { get; set; }
+    public string OutRefundNo { get; set; } = string.Empty;
 
     public void OnGet()
     {

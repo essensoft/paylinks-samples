@@ -12,7 +12,7 @@ public class PayModel(IAlipayClient client, IOptions<PaylinksOptions> options) :
     private readonly AlipayClientOptions _options = options.Value.Alipay;
 
     [BindProperty]
-    public AlipayTradePayBodyModel Input { get; set; }
+    public AlipayTradePayBodyModel Input { get; set; } = default!;
 
     public void OnGet()
     {

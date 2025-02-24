@@ -13,7 +13,7 @@ public class NativePrepayModel(IWeChatPayClient client, IOptions<PaylinksOptions
     private readonly WeChatPayClientOptions _options = options.Value.WeChatPay;
 
     [BindProperty]
-    public WeChatPayTransactionsNativeBodyModel Input { get; set; }
+    public WeChatPayTransactionsNativeBodyModel Input { get; set; } = default!;
 
     public void OnGet()
     {

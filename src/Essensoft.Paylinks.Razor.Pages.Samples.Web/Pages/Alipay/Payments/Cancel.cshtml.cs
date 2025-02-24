@@ -12,7 +12,7 @@ public class CancelModel(IAlipayClient client, IOptions<PaylinksOptions> options
     private readonly AlipayClientOptions _options = options.Value.Alipay;
 
     [BindProperty]
-    public AlipayTradeCancelBodyModel Input { get; set; }
+    public AlipayTradeCancelBodyModel Input { get; set; } = default!;
 
     public void OnGet()
     {

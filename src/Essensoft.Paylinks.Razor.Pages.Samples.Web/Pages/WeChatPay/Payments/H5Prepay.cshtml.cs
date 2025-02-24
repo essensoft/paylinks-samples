@@ -13,7 +13,7 @@ public class H5PrepayModel(IWeChatPayClient client, IOptions<PaylinksOptions> op
     private readonly WeChatPayClientOptions _options = options.Value.WeChatPay;
 
     [BindProperty]
-    public WeChatPayTransactionsH5BodyModel Input { get; set; }
+    public WeChatPayTransactionsH5BodyModel Input { get; set; } = default!;
 
     public void OnGet()
     {

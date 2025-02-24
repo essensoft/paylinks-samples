@@ -13,7 +13,7 @@ public class CodePayModel(IWeChatPayClient client, IOptions<PaylinksOptions> opt
     private readonly WeChatPayClientOptions _options = options.Value.WeChatPay;
 
     [BindProperty]
-    public WeChatPayTransactionsCodePayBodyModel Input { get; set; }
+    public WeChatPayTransactionsCodePayBodyModel Input { get; set; } = default!;
 
     public void OnGet()
     {

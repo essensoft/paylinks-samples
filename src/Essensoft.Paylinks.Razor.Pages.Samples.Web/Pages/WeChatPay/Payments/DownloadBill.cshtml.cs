@@ -11,7 +11,7 @@ public class DownloadBillModel(IWeChatPayClient client, IOptions<PaylinksOptions
     private readonly WeChatPayClientOptions _options = options.Value.WeChatPay;
 
     [BindProperty]
-    public string DownloadUrl { get; set; }
+    public string DownloadUrl { get; set; } = default!;
 
     public void OnGet()
     {

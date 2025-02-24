@@ -11,10 +11,10 @@ public class PaylinksOptions
     /// <summary>
     /// Alipay 客户端选项
     /// </summary>
-    public AlipayClientOptions Alipay { get; set; }
+    public AlipayClientOptions Alipay { get; set; } = default!;
 
     /// <summary>
     /// WeChatPay 客户端选项
     /// </summary>
-    public WeChatPayClientOptions WeChatPay { get; set; }
+    public WeChatPayClientOptions WeChatPay { get; set; } = default!;
 }

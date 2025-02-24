@@ -12,10 +12,10 @@ public class CloseModel(IWeChatPayClient client, IOptions<PaylinksOptions> optio
     private readonly WeChatPayClientOptions _options = options.Value.WeChatPay;
 
     [BindProperty]
-    public string OutTradeNo { get; set; }
+    public string OutTradeNo { get; set; } = string.Empty;
 
     [BindProperty]
-    public WeChatPayCloseByOutTradeNoBodyModel Input { get; set; }
+    public WeChatPayCloseByOutTradeNoBodyModel Input { get; set; } = default!;
 
     public void OnGet()
     {

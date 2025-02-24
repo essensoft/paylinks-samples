@@ -12,10 +12,10 @@ public class AbnormalRefundModel(IWeChatPayClient client, IOptions<PaylinksOptio
     private readonly WeChatPayClientOptions _options = options.Value.WeChatPay;
 
     [BindProperty]
-    public string RefundId { get; set; }
+    public string RefundId { get; set; } = string.Empty;
 
     [BindProperty]
-    public WeChatPayApplyAbnormalRefundByRefundIdBodyModel Input { get; set; }
+    public WeChatPayApplyAbnormalRefundByRefundIdBodyModel Input { get; set; } = default!;
 
     public void OnGet()
     {

@@ -12,7 +12,7 @@ public class BillDownloadUrlQueryModel(IAlipayClient client, IOptions<PaylinksOp
     private readonly AlipayClientOptions _options = options.Value.Alipay;
 
     [BindProperty]
-    public AlipayDataDataServiceBillDownloadUrlQueryModel Input { get; set; }
+    public AlipayDataDataServiceBillDownloadUrlQueryModel Input { get; set; } = default!;
 
     public void OnGet()
     {

@@ -14,7 +14,7 @@ public class AppPrepayModel(IWeChatPayClient client, IOptions<PaylinksOptions> o
     private readonly WeChatPayClientOptions _options = options.Value.WeChatPay;
 
     [BindProperty]
-    public WeChatPayTransactionsAppBodyModel Input { get; set; }
+    public WeChatPayTransactionsAppBodyModel Input { get; set; } = default!;
 
     public void OnGet()
     {

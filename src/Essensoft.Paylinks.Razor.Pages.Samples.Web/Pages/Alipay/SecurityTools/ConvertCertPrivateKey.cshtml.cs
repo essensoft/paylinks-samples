@@ -7,7 +7,7 @@ namespace Essensoft.Paylinks.Razor.Pages.Samples.Web.Pages.Alipay.SecurityTools;
 public class ConvertCertPrivateKeyModel : PageModel
 {
     [BindProperty]
-    public IFormFile CertPrivateKey { get; set; }
+    public IFormFile CertPrivateKey { get; set; } = default!;
 
     public void OnGet()
     {
