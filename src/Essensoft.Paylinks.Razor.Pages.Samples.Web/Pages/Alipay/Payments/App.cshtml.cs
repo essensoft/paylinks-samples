@@ -21,7 +21,6 @@ public class AppModel(IAlipayClient client, IOptions<PaylinksOptions> options) :
             OutTradeNo = DateTimeOffset.Now.ToString("yyyyMMddHHmmssfff"),
             TotalAmount = "0.01",
             Subject = "App支付测试",
-            NotifyUrl = "https://www.domain.com/Alipay/Payments/Notify/TradeResult"
         };
     }
 
@@ -29,6 +28,7 @@ public class AppModel(IAlipayClient client, IOptions<PaylinksOptions> options) :
     {
         var request = new AlipayTradeAppPayRequest();
         request.SetBizModel(Input);
+        request.SetNotifyUrl("https://www.domain.com/Alipay/Payments/Notify/TradeResult");
         ViewData["response"] = await client.SdkExecuteAsync(request, _options);
     }
 }

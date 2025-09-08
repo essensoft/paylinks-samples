@@ -21,8 +21,7 @@ public class WebModel(IAlipayClient client, IOptions<PaylinksOptions> options) :
             OutTradeNo = DateTimeOffset.Now.ToString("yyyyMMddHHmmssfff"),
             TotalAmount = "0.01",
             Subject = "电脑网站支付测试",
-            ProductCode = "FAST_INSTANT_TRADE_PAY",
-            NotifyUrl = "https://www.domain.com/Alipay/Payments/Notify/TradeResult"
+            ProductCode = "FAST_INSTANT_TRADE_PAY"
         };
     }
 
@@ -30,6 +29,8 @@ public class WebModel(IAlipayClient client, IOptions<PaylinksOptions> options) :
     {
         var request = new AlipayTradePagePayRequest();
         request.SetBizModel(Input);
+        request.SetNotifyUrl("https://www.domain.com/Alipay/Payments/Notify/TradeResult");
+        request.SetReturnUrl("https://www.domain.com/Alipay/Payments/Notify/TradeResult");
         ViewData["response"] = await client.PageExecuteAsync(request, _options);
     }
 

@@ -21,8 +21,7 @@ public class WapModel(IAlipayClient client, IOptions<PaylinksOptions> options) :
             OutTradeNo = DateTimeOffset.Now.ToString("yyyyMMddHHmmssfff"),
             TotalAmount = "0.01",
             Subject = "手机网站支付测试",
-            ProductCode = "QUICK_WAP_WAY",
-            NotifyUrl = "https://www.domain.com/Alipay/Payments/Notify/TradeResult"
+            ProductCode = "QUICK_WAP_WAY"
         };
     }
 
@@ -30,6 +29,8 @@ public class WapModel(IAlipayClient client, IOptions<PaylinksOptions> options) :
     {
         var request = new AlipayTradeWapPayRequest();
         request.SetBizModel(Input);
+        request.SetNotifyUrl("https://www.domain.com/Alipay/Payments/Notify/TradeResult");
+        request.SetReturnUrl("https://www.domain.com/Alipay/Payments/Notify/TradeResult");
         ViewData["response"] = await client.PageExecuteAsync(request, _options);
     }
 
